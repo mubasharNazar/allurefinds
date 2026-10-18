@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Bag · AllureFinds</title>
+  <meta name="description" content="Review your order and confirm it via WhatsApp.">
+  <meta name="theme-color" content="#16130f">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="cart">
+<main>
+  <section class="page-hero" style="padding-bottom:2rem">
+    <div class="container">
+      <div class="breadcrumbs"><a href="index.html">Home</a>/<span>Your bag</span></div>
+      <h1>Your <em class="accent">bag</em></h1>
+      <p class="lead">Review your selection, then confirm on WhatsApp — we'll send a free mock-up and final quote before anything is printed.</p>
+    </div>
+  </section>
+  <section>
+    <div class="container cart-layout">
+      <div>
+        <div class="cart-table" data-cart-list></div>
+        <div style="display:flex;justify-content:space-between;margin-top:1rem;flex-wrap:wrap;gap:1rem">
+          <a href="shop.html" class="link-arrow">← Continue shopping</a>
+          <button class="remove-btn" data-clear-cart>Clear bag</button>
+        </div>
+      </div>
+      <aside class="summary" data-cart-summary>
+        <h3>Order summary</h3>
+        <div class="totals-row"><span>Items</span><span data-sum-items></span></div>
+        <div class="totals-row"><span>Subtotal</span><span data-sum-sub></span></div>
+        <div class="totals-row" style="color:var(--success)"><span>Bulk savings</span><span data-sum-save></span></div>
+        <div class="totals-row"><span>Delivery</span><span>Quoted on confirmation</span></div>
+        <hr>
+        <div class="totals-row grand"><span>Estimated total</span><span data-sum-total></span></div>
+        <form data-checkout novalidate>
+          <div class="field"><label for="c-name">Full name <span class="req">*</span></label><input id="c-name" name="name" required autocomplete="name"><span class="err">Please enter your name</span></div>
+          <div class="field"><label for="c-phone">Phone <span class="req">*</span></label><input id="c-phone" name="phone" type="tel" required autocomplete="tel"><span class="err">Please enter your phone</span></div>
+          <div class="field"><label for="c-city">City <span class="req">*</span></label><input id="c-city" name="city" required autocomplete="address-level2"><span class="err">Please enter your city</span></div>
+          <div class="field"><label for="c-date">Needed by</label><input id="c-date" name="date" type="date"></div>
+          <div class="field"><label for="c-notes">Notes</label><textarea id="c-notes" name="notes" style="min-height:80px" placeholder="Delivery address, packaging preferences…"></textarea></div>
+          <button class="btn btn-whatsapp btn-block" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4ZM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8ZM12 0a12 12 0 0 0-10.3 18L0 24l6.2-1.6A12 12 0 1 0 12 0Z"/></svg> Confirm order on WhatsApp</button>
+          <p class="form-note">No payment is taken online. We confirm details and payment options with you directly.</p>
+        </form>
+      </aside>
+    </div>
+  </section>
+</main>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
